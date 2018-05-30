@@ -3,7 +3,9 @@
     <div class="features">
         <div class="grid-container">
           <div class="grid-item item1 slides">
-            <%= image_tag('ibiza.jpg' , class:'slide') %>
+            <%#= image_tag('ibiza.jpg' , class:'slide') %>
+            <%= cl_image_tag @house.photo %>
+            <%#= cl_image_tag @article.photo, height: 300, width: 400, crop: :fill %>
           </div>
           <div class="grid-item item2 detailsShow">
             <div class="detailsValues">

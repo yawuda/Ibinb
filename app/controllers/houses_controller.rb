@@ -28,7 +28,7 @@ class HousesController < ApplicationController
 
     respond_to do |format|
       if @house.save
-        format.html { redirect_to @house, notice: 'House was successfully created.' }
+        format.html { redirect_to houses_path, notice: 'House was successfully created.' }
         format.json { render :show, status: :created, location: @house }
       else
         format.html { render :new }
@@ -69,6 +69,6 @@ class HousesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def house_params
-      params.require(:house).permit(:name, :description, :price, :guest, :bedroom, :bathroom, :pool, :parking, :terrace)
+      params.require(:house).permit(:name, :description, :price, :guest, :bedroom, :bathroom, :pool, :parking, :terrace, :photo)
     end
 end
