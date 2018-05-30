@@ -1,0 +1,40 @@
+<section>
+  <div class="container">
+    <div class="features">
+        <div class="grid-container">
+          <div class="grid-item item1 slides">
+            <%= image_tag('ibiza.jpg' , class:'slide') %>
+          </div>
+          <div class="grid-item item2 detailsShow">
+            <div class="detailsValues">
+              <ul style="list-style: none;">
+                <li>Number of guest:</li>
+                <li>Number of bedroom:</li>
+                <li>Terrace:</li>
+                <li>Number of bathroom:</li>
+                <li>Pool:</li>
+                <li>Parking:</li>
+              </ul>
+            </div>
+            <div class="detailsFields">
+              <ul style="list-style: none;">
+                <li><%= @house.guest %></li>
+                <li><%= @house.bedroom %></li>
+                <li><%= @house.terrace %></li>
+                <li><%= @house.bathroom %></li>
+                <li><%= @house.pool %></li>
+                <li><%= @house.parking %></li>
+              </ul>
+            </div>
+          </div>
+          <div class="grid-item item5 longDescription">
+            <%= @house.description %>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<%= link_to 'Edit', edit_house_path(@house) %> |
+<%= link_to 'Back', houses_path %> |
+<%= link_to 'Destroy', house_path, method: :delete, data: { confirm: 'Are you sure?' } %>

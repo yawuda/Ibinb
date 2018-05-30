@@ -1,0 +1,100 @@
+
+  <script src="typeScript.js"></script>
+  <header>
+    <div class='background'>
+      <div class='font'>
+        <h1>WELCOME TO YOUR FUTURE HOUSE</h1>
+          <br>
+        <h1>
+          <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Si.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
+          <span class="wrap"></span>
+          </a>
+        </h1>
+        <div class='buttons'>
+          <p class='button'>Do something else</p>
+          <%= link_to houses_path do %>
+            <p class='button'>Look for a house</p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class='about'>
+    <h3 class='text-center'>ABOUT US</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique asperiores tempore deserunt, ea deleniti tenetur quas adipisci aspernatur beatae dolores temporibus quod maxime ipsum accusantium commodi? Error libero modi quidem!
+        </div>
+        <div class="col-md-6">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem natus ea quam quae vero modi a illum fugit iusto, labore eius temporibus necessitatibus dignissimos cupiditate ut harum nisi, voluptate eos!
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class='carousel'>
+    <div class='slides'>
+     <%= image_tag("ibiza1.jpeg", class:"mySlides", :style=>'width:100%
+') %>
+     <%= image_tag("ibiza2.jpeg", class:"mySlides", :style=>'width:100%
+') %>
+     <%= image_tag("ibiza3.jpeg", class:"mySlides", :style=>'width:100%
+') %>
+    </div>
+  </section>
+  <section class='contact'>
+    <h3 class='text-center'>CONTACT US</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+          <input type="text" placeholder="firstname" class='form-control'><br>
+          <input type="text" placeholder="lastname" class='form-control'><br>
+          <input type="email" placeholder="email" class='form-control'><br>
+          <input type="text" placeholder="number" class='form-control'><br>
+        </div>
+        <div class="col-sm-12 col-md-8">
+          <textarea class='form-control' placeholder="comments" cols="30" rows="10"></textarea>
+        </div>
+        <div class='col-md-12'>
+          <button class='btn btn-warning btn-block'>submit</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
+  <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+     }
+     myIndex++;
+     if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+</script>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>W3.CSS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="section">
+    <img class="mySlides" src="photos/ibiza2.jpg">
+    <img class="mySlides" src="photos/ibiza3.jpg">
+    <img class="mySlides" src="photos/ibiza4.jpeg">
+  </div>
+
+
+</body>
+</html> -->

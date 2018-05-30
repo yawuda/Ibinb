@@ -1,0 +1,62 @@
+<%= form_with(model: house, local: true) do |form| %>
+  <% if house.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(house.errors.count, "error") %> prohibited this house from being saved:</h2>
+
+      <ul>
+      <% house.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_area :name, id: :house_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :house_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, id: :house_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :guest %>
+    <%= form.number_field :guest, id: :house_guest %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bedroom %>
+    <%= form.number_field :bedroom, id: :house_bedroom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bathroom %>
+    <%= form.number_field :bathroom, id: :house_bathroom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pool %>
+    <%= form.check_box :pool, id: :house_pool %>
+  </div>
+
+  <div class="field">
+    <%= form.label :parking %>
+    <%= form.check_box :parking, id: :house_parking %>
+  </div>
+
+  <div class="field">
+    <%= form.label :terrace %>
+    <%= form.check_box :terrace, id: :house_terrace %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

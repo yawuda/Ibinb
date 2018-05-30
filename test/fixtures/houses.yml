@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  description: MyText
+  price: MyString
+  guest: 1
+  bedroom: 1
+  bathroom: 1
+  pool: false
+  parking: false
+  terrace: false
+
+two:
+  name: MyText
+  description: MyText
+  price: MyString
+  guest: 1
+  bedroom: 1
+  bathroom: 1
+  pool: false
+  parking: false
+  terrace: false
