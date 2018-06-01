@@ -89,12 +89,21 @@
       <p>From flat to villa in a second</p>
     </div>
     <div class='backdates'>
-      <form action="/action_page.php">
+      <form>
         <label for="fname">Check-in</label>
         <input type="date" data-date-inline-picker="true"/>
         <label for="lname">Check-out</label>
         <input type="date" data-date-inline-picker="true"/>
+
+        <%= form_tag houses_path, method: :get do %>
         <label for="country">Guests</label>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "",
+          placeholder: "Find a room by guest"
+        %>
+        <% end %>
+
         <input type="number" name="quantity" min="1" max="10">
        <!--  <select id="country" name="country">
           <option value="australia">Australia</option>
@@ -113,10 +122,17 @@
     <div class="col-sm-12 col-md-6 col-lg-4">
       <div class="wholeCard">
         <td><%= link_to house do %></td>
-        <div class="topCard">
-          <h2 class="card-category"><%= house.name %></h2>
-          <p class="card-user"><%= house.price %>€ Per night</p>
-        </div>
+          <div class="topCard">
+                  <%#= image_tag(@house.photo, width: '100%') %>
+          <!--   <h2 class="card-category"><%= house.name %></h2>
+            <p class="card-user"><%= house.price %>€ Per night</p> -->
+            <div class="details">
+              <div class="content">
+                <h2>what is Lorem Ipsum?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sint, iure fugiat recusandae iusto inventore.</p>
+              </div>
+            </div>
+          </div>
         <% end %>
         <div class="lowCard container">
 <!--           <i class="fa fa-bed"></i>-->
